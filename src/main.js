@@ -10,7 +10,8 @@ import {
 
 import Homepage from './components/homepage.js';
 import RedditApp from './components/appReddit.js';
-// import './style/main.scss';
+import CowApp from './components/appCow.js';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -26,13 +27,15 @@ class App extends React.Component {
         <nav>
           <ul>
             <li><Link to="/">Homepage</Link></li>
-            <li><Link to="/contacts">Contacts</Link></li>
             <li><Link to="/reddit">Reddit</Link></li>
+            <li><Link to="/cowsay">Cowsay</Link></li>
+            <li><Link to="/contacts">Contacts</Link></li>
           </ul>
         </nav>
         <h1>{this.state.title}</h1>
         <Route exact path="/" component={Homepage} />
         <Route path="/reddit" component={RedditApp} />
+        <Route path="/cowsay" component={CowApp} />
       </div>
     </Router>;
   }

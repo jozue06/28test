@@ -1,12 +1,9 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 
-import Cowsay from 'react-cowsay';
 import faker from 'faker';
 import Header from './header.js';
 import Footer from './footer.js';
 import Style from './styledComps';
-import Card from './card.js';
 import fetch from 'node-fetch';
 import SearchForm from './searchForm.js';
 import SearchResults from './SearchResults.js';
@@ -85,14 +82,6 @@ then((json) => {
         <Style.Wrapper>
         <SearchForm submit={this.handleSubmit} />
         <SearchResults results={this.state.results}/>
-        <Card updateCowS={this.updateCow}/>
-          <Style.Button primary ><p onClick={this.btnCow} id="gen">
-            Generate some text for the cow!
-          </p>
-          </Style.Button>
-          <Style.Text>
-            <Cowsay {...opts}>{this.state.fakerLorem}</Cowsay>
-          </Style.Text>
         </Style.Wrapper>
         <Footer />
       </div>
