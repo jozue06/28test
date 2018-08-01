@@ -89,5 +89,16 @@
         "mainFile": "src/components/styledComps.js",
         "origin": "AUTHORED"
     },
+    "components/homepage@0.0.2": {
+        "files": [
+            {
+                "relativePath": "src/components/homepage.js",
+                "test": false,
+                "name": "homepage.js"
+            }
+        ],
+        "mainFile": "src/components/homepage.js",
+        "origin": "AUTHORED"
+    },
     "version": "13.0.4"
 }
