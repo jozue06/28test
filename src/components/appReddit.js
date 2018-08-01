@@ -1,19 +1,16 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 
-import Cowsay from 'react-cowsay';
 import faker from 'faker';
-import Header from './components/header.js';
-import Footer from './components/footer.js';
-import Style from './components/styledComps';
-import Card from './components/card.js';
+import Header from './header.js';
+import Footer from './footer.js';
+import Style from './styledComps';
 import fetch from 'node-fetch';
-import SearchForm from './components/searchForm.js';
-import SearchResults from './components/SearchResults.js';
-import Reddit from './components/styledReddit.js';
-import NoResults from './components/noResults';
+import SearchForm from './searchForm.js';
+import SearchResults from './SearchResults.js';
+import Reddit from './styledReddit.js';
+import NoResults from './noResults';
 
-class App extends React.Component {
+class RedditApp extends React.Component {
   constructor(props) {
     super(props);
 
@@ -85,14 +82,6 @@ then((json) => {
         <Style.Wrapper>
         <SearchForm submit={this.handleSubmit} />
         <SearchResults results={this.state.results}/>
-        <Card updateCowS={this.updateCow}/>
-          <Style.Button primary ><p onClick={this.btnCow} id="gen">
-            Generate some text for the cow!
-          </p>
-          </Style.Button>
-          <Style.Text>
-            <Cowsay {...opts}>{this.state.fakerLorem}</Cowsay>
-          </Style.Text>
         </Style.Wrapper>
         <Footer />
       </div>
@@ -100,4 +89,4 @@ then((json) => {
   }
 }
 
-ReactDom.render(<App />, document.getElementById('root'));
+export default RedditApp;
