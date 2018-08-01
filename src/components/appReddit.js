@@ -3,17 +3,17 @@ import ReactDom from 'react-dom';
 
 import Cowsay from 'react-cowsay';
 import faker from 'faker';
-import Header from './components/header.js';
-import Footer from './components/footer.js';
-import Style from './components/styledComps';
-import Card from './components/card.js';
+import Header from './header.js';
+import Footer from './footer.js';
+import Style from './styledComps';
+import Card from './card.js';
 import fetch from 'node-fetch';
-import SearchForm from './components/searchForm.js';
-import SearchResults from './components/SearchResults.js';
-import Reddit from './components/styledReddit.js';
-import NoResults from './components/noResults';
+import SearchForm from './searchForm.js';
+import SearchResults from './SearchResults.js';
+import Reddit from './styledReddit.js';
+import NoResults from './noResults';
 
-class App extends React.Component {
+class RedditApp extends React.Component {
   constructor(props) {
     super(props);
 
@@ -100,4 +100,4 @@ then((json) => {
   }
 }
 
-ReactDom.render(<App />, document.getElementById('root'));
+export default RedditApp;
