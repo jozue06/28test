@@ -12,7 +12,6 @@ const Text = styled.h1`
   text-align: center;
   color: palevioletred;
 `;
- 
 
 // Create a Wrapper component that'll render a <section> tag with some styles
 const Wrapper = styled.section`

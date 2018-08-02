@@ -1,5 +1,5 @@
 import React from 'react';
-
+import B from './styledComps.js';
 class Homepage extends React.Component {
   constructor(props) {
     super(props);
@@ -7,7 +7,7 @@ class Homepage extends React.Component {
 
   render() {
     return <div>
-      <p>Welcome to my wonderful homepage</p>
+      <B.Title>Welcome to my wonderful homepage</B.Title>
     </div>;
   }
 }

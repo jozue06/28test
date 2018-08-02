@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ID from 'uuid';
+import B from './components/styledComps.js';
 
 import {
   BrowserRouter as Router,
@@ -11,6 +12,7 @@ import {
 import Homepage from './components/homepage.js';
 import RedditApp from './components/appReddit.js';
 import CowApp from './components/appCow.js';
+import NewNote from './components/noteInput.js';
 
 
 class App extends React.Component {
@@ -29,13 +31,14 @@ class App extends React.Component {
             <li><Link to="/">Homepage</Link></li>
             <li><Link to="/reddit">Reddit</Link></li>
             <li><Link to="/cowsay">Cowsay</Link></li>
-            <li><Link to="/contacts">Contacts</Link></li>
+            <li><Link to="/notes">Notes</Link></li>
           </ul>
         </nav>
-        <h1>{this.state.title}</h1>
+        <B.Title>{this.state.title}</B.Title>
         <Route exact path="/" component={Homepage} />
         <Route path="/reddit" component={RedditApp} />
         <Route path="/cowsay" component={CowApp} />
+        <Route path="/notes" component={NewNote} />
       </div>
     </Router>;
   }
