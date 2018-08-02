@@ -31,7 +31,7 @@ render() {
         <Style.Wrapper>
         <PlayerForm addPlayers={this.addPlayer} />
         <PlayerResults />
-        <PlayerItem />
+        <PlayerItem players={this.state.players} />
         </Style.Wrapper>
         <Footer />
       </div>

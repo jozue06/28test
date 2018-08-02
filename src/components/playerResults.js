@@ -10,10 +10,10 @@ class PlayerResults extends React.Component {
 
 
   showTable() {
-    return this.props.players.map((player) => {
-      return <Results key={player.id} id={player.id} title={player.title} position={player.position} />;
-    });
-  }
+    console.log('showtable')
+    return this.props.players
+    };
+  
 
   render() {
     return (  
@@ -26,7 +26,8 @@ class PlayerResults extends React.Component {
       </ul>
      </div>
      </Reddit.Wrapper>
-    ); }
+    ); 
+  }
 }
 
 export default PlayerResults;

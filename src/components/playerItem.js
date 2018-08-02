@@ -3,6 +3,9 @@ import React from 'react';
 class PlayerItem extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      player: [],
+    }
 
   }
 
@@ -11,9 +14,9 @@ class PlayerItem extends React.Component {
 //   }
 
   render() {
-    return <li className="note">
-      <h3>{this.props.player.playername}</h3>
-      <h4>{this.props.player.position}</h4>
+    return <li className="player">
+      <h3>{this.props.player}</h3>
+      {/* <h4>{this.props.player}</h4> */}
     </li>;
   }
 }
