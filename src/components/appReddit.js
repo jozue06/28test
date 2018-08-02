@@ -1,6 +1,5 @@
 import React from 'react';
 
-import faker from 'faker';
 import Header from './header.js';
 import Footer from './footer.js';
 import Style from './styledComps';
@@ -15,29 +14,13 @@ class RedditApp extends React.Component {
     super(props);
 
     this.state = {
-      fakerLorem: '',
-      cowSelect: '',
       query: '',
       results: [],
     };
 
-    this.btnCow = this.btnCow.bind(this);
-    this.updateState = this.updateState.bind(this);
-    this.updateCow = this.updateCow.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  btnCow(e) {
-    this.updateState(this.state.fakerLorem = faker.hacker.phrase());
-  }
-
-  updateState(fakerLorem) {
-    this.setState({ fakerLorem });
-  }
-
-  updateCow(cowSelect) {
-    this.setState({ cowSelect });
-  }
 
   handleSubmit(query) {
     const url = `https://www.reddit.com/r/${query.subreddit}.json?limit=${query.limit}`;
@@ -51,7 +34,6 @@ class RedditApp extends React.Component {
     }).
 then((json) => {
 
-  // console.log('stufffsfss -->', json.data.children);
 
   return (json.data.children.length === 0 ? this.setState({ results: <NoResults /> }) : this.setState({
         results: json.data.children.map((item) => <li key={item.data.id}>
@@ -71,10 +53,7 @@ then((json) => {
   }
 
 
-  render() {  
-    const opts = {
-    };
-    opts[this.state.cowSelect] = true;
+  render() {
 
     return (
       <div>

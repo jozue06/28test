@@ -23,6 +23,7 @@ class SearchForm extends React.Component {
   handleSubmit(ev) {
     ev.preventDefault();
     this.props.submit(this.state);
+    console.log('serch form state -->', this.state);
   }
 
 

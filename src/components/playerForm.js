@@ -1,18 +1,18 @@
 import React from 'react';
 import uuidv4 from 'uuid/v4';
 
-class NoteForm extends React.Component {
+class PlayerForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
-      content: '',
-      editing: false,
-      completed: false,
-      id: ''
+      playerName: '',
+      position: 0,
+      id: '',
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
   handleChange(e) {
@@ -22,17 +22,18 @@ class NoteForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.addNotes(this.state);
-    console.log('what the hells the diff!!! -->', this.state);
+    this.props.addPlayers(this.state);
+    console.log('plaasss?', this.state);
   }
+
 
   render() {
     return <form onSubmit={this.handleSubmit}>
-      <input type="text" name="title" placeholder="Title" onChange={this.handleChange}/>
-      <input type="text" name="content" placeholder="To do" onChange={this.handleChange}/>
+      <input type="text" name="playerName" placeholder="Player Name" onChange={this.handleChange}/>
+      <input type="number" name="position" placeholder="position" onChange={this.handleChange}/>
       <input type="submit" value="Add"/>
     </form>;
   }
 }
 
-export default NoteForm;
+export default PlayerForm;
