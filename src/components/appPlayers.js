@@ -3,8 +3,9 @@ import React from 'react';
 import Header from './header.js';
 import Footer from './footer.js';
 import Style from './styledComps';
-// import PlayerResults from './playerResults';
+import PlayerResults from './playerResults';
 import PlayerForm from './playerForm.js';
+import PlayerItem from './playerItem.js';
 
 
 class PlayersApp extends React.Component {
@@ -20,8 +21,11 @@ class PlayersApp extends React.Component {
     addPlayer(player) {
     this.state.players.push(player);
     this.setState({ players: this.state.players });
+    console.log('#1 added player:', this.state.players);
     }
 
+
+    
 render() {
 
     return (
@@ -29,6 +33,8 @@ render() {
         <Header />
         <Style.Wrapper>
         <PlayerForm addPlayers={this.addPlayer} />
+        <PlayerItem players={this.state.players} />
+        <PlayerResults players={this.state.players.id}/>
         </Style.Wrapper>
         <Footer />
       </div>

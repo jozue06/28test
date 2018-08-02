@@ -23,7 +23,7 @@ class PlayerForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.addPlayers(this.state);
-    console.log('plaasss?', this.state);
+    console.log('# 1.0 plaasss?', this.state);
   }
 
 

@@ -12,8 +12,7 @@ import {
 import Homepage from './components/homepage.js';
 import RedditApp from './components/appReddit.js';
 import CowApp from './components/appCow.js';
-import NewNote from './components/noteInput.js';
-import Players from './components/Players.js';
+import Players from './components/appPlayers.js';
 
 
 class App extends React.Component {
@@ -32,7 +31,6 @@ class App extends React.Component {
             <li><Link to="/">Homepage</Link></li>
             <li><Link to="/reddit">Reddit</Link></li>
             <li><Link to="/cowsay">Cowsay</Link></li>
-            <li><Link to="/notes">Notes</Link></li>
             <li><Link to="/players">Players Table</Link></li>
           </ul>
         </nav>
@@ -40,8 +38,7 @@ class App extends React.Component {
         <Route exact path="/" component={Homepage} />
         <Route path="/reddit" component={RedditApp} />
         <Route path="/cowsay" component={CowApp} />
-        <Route path="/notes" component={NewNote} />
-        <Route path="/players" component={Players} /> 
+        <Route path="/players" component={Players} />
 
       </div>
     </Router>;

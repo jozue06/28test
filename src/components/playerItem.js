@@ -4,8 +4,8 @@ class PlayerItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      player: [],
-    }
+      players: {},
+    };
 
   }
 
@@ -14,8 +14,10 @@ class PlayerItem extends React.Component {
 //   }
 
   render() {
-    return <li className="player">
-      <h3>{this.props.player}</h3>
+    console.log('#2 render the player item', this.props.players[0]);
+
+return <li className="player">
+      <h3>what is this?: {this.props.players.playerName}</h3>
       {/* <h4>{this.props.player}</h4> */}
     </li>;
   }

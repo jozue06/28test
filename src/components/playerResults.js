@@ -10,13 +10,13 @@ class PlayerResults extends React.Component {
 
 
   showTable() {
-    console.log('showtable')
-    return this.props.players
-    };
-  
+    console.log('showtable');
+
+return this.props.players;
+    }
 
   render() {
-    return (  
+    return (
     <Reddit.Wrapper>
       <div>
       <ul>
@@ -26,7 +26,7 @@ class PlayerResults extends React.Component {
       </ul>
      </div>
      </Reddit.Wrapper>
-    ); 
+    );
   }
 }
 
