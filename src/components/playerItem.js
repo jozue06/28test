@@ -15,10 +15,10 @@ class PlayerItem extends React.Component {
 
   render() {
   
-    console.log('#2 render the player item', this.props);
+    console.log('#2 render the player item', this.props.player);
 
     return <li className="player">
-      {/* <h3>what is this?: {this.props.players[0].playerName}</h3> */}
+      <h3>Player: {this.props.player.playerName} Position:{this.props.player.position} </h3>
       {/* <h4>{this.props.player}</h4> */}
     </li>;
   }
