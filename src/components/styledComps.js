@@ -36,8 +36,8 @@ const Button = styled.button`
 `;
 // Use Title and Wrapper like any other React component – except they're styled!
 export default {
-    Button,
-    Title,
-    Wrapper,
-    Text,
+  Button,
+  Title,
+  Wrapper,
+  Text,
 };

@@ -31,7 +31,7 @@ class SearchForm extends React.Component {
     return <form className={this.props.error} onSubmit={this.handleSubmit}>
       <input type="text" name="subreddit" onChange={this.handleChange} value={this.subreddit} placeholder="enter subreddit name" />
       <input type="number" name="limit" value={this.limit} onChange={this.handleChange} min="0" max="100"
-       />
+      />
       <input type="submit" value="GO!" />
     </form>;
   }

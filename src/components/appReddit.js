@@ -25,31 +25,31 @@ class RedditApp extends React.Component {
   handleSubmit(query) {
     const url = `https://www.reddit.com/r/${query.subreddit}.json?limit=${query.limit}`;
     fetch(url).
-    then((res) => {
-      this.state.error = '';
-      console.log('ress -->', res);
+      then((res) => {
+        this.state.error = '';
+        console.log('ress -->', res);
 
-    return res.json();
+        return res.json();
 
-    }).
-then((json) => {
+      }).
+      then((json) => {
 
 
-  return (json.data.children.length === 0 ? this.setState({ results: <NoResults /> }) : this.setState({
-        results: json.data.children.map((item) => <li key={item.data.id}>
+        return (json.data.children.length === 0 ? this.setState({ results: <NoResults /> }) : this.setState({
+          results: json.data.children.map((item) => <li key={item.data.id}>
             <Reddit.Link href={item.data.url}>
               {item.data.title} <br />
             </Reddit.Link>
             <Reddit.Ups>
-             Reddit Up Votes: {item.data.ups}
-              </Reddit.Ups>
+              Reddit Up Votes: {item.data.ups}
+            </Reddit.Ups>
           </li>)
-      })
+        })
         );
-    }).
-    catch((err) => {
-      console.log('the fetch err??', err);
-    });
+      }).
+      catch((err) => {
+        console.log('the fetch err??', err);
+      });
   }
 
 
@@ -59,8 +59,8 @@ then((json) => {
       <div>
         <Header />
         <Style.Wrapper>
-        <SearchForm submit={this.handleSubmit} />
-        <SearchResults results={this.state.results}/>
+          <SearchForm submit={this.handleSubmit} />
+          <SearchResults results={this.state.results} />
         </Style.Wrapper>
         <Footer />
       </div>

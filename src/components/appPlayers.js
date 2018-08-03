@@ -9,37 +9,36 @@ import PlayerItem from './playerItem.js';
 
 
 class PlayersApp extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          players: []
-        };
+  constructor(props) {
+    super(props);
+    this.state = {
+      players: []
+    };
 
-        this.addPlayer = this.addPlayer.bind(this);
-      }
+    this.addPlayer = this.addPlayer.bind(this);
+  }
 
-    addPlayer(player) {
+  addPlayer(player) {
     this.state.players.push(player);
-    this.setState({ players: this.state.players });
+    this.setState({ players: [...this.state.players] });
     console.log('#1 added player:', this.state.players);
-    }
+  }
 
-
-    
-render() {
+  render() {
 
     return (
       <div>
         <Header />
         <Style.Wrapper>
-        <PlayerForm addPlayers={this.addPlayer} />
-        <PlayerItem players={this.state.players} />
-        <PlayerResults players={this.state.players.id}/>
+          <PlayerForm addPlayers={this.addPlayer} />
+          {this.state.players.map((player) => <PlayerItem key={player.playerName} player={player} />)}
+          {/*  /> */}
+          <PlayerResults players={this.state.players.id} />
         </Style.Wrapper>
         <Footer />
       </div>
     );
- }
+  }
 }
 
 

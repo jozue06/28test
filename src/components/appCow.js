@@ -34,8 +34,7 @@ class CowApp extends React.Component {
     this.setState({ cowSelect });
   }
 
-  
-  render() {  
+  render() {
     const opts = {
     };
     opts[this.state.cowSelect] = true;

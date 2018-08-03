@@ -12,7 +12,6 @@ class Card extends Component {
 
     this.showMenu = this.showMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
-    // this.cowSelect = this.cowSelect.bind(this);
     this.updateState = this.updateState.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }

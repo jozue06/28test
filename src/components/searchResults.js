@@ -8,16 +8,17 @@ class SearchResults extends React.Component {
 
   render() {
     return (
-    <Reddit.Wrapper>
-      <div>
-      <ul>
-      <Reddit.Text>
-      {this.props.results}
-      </Reddit.Text>
-      </ul>
-     </div>
-     </Reddit.Wrapper>
-    ); }
+      <Reddit.Wrapper>
+        <div>
+          <ul>
+            <Reddit.Text>
+              {this.props.results}
+            </Reddit.Text>
+          </ul>
+        </div>
+      </Reddit.Wrapper>
+    );
+  }
 }
 
 export default SearchResults;

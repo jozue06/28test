@@ -42,10 +42,10 @@ const Button = styled.button`
 `;
 
 export default {
-    Button,
-    Title,
-    Wrapper,
-    Text,
-    Link,
-    Ups,
+  Button,
+  Title,
+  Wrapper,
+  Text,
+  Link,
+  Ups,
 };

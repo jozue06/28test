@@ -23,15 +23,15 @@ class PlayerForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.addPlayers(this.state);
-    console.log('# 1.0 plaasss?', this.state);
+    console.log('# 1.1 plaasss?', this.state);
   }
 
 
   render() {
     return <form onSubmit={this.handleSubmit}>
-      <input type="text" name="playerName" placeholder="Player Name" onChange={this.handleChange}/>
-      <input type="number" name="position" placeholder="position" onChange={this.handleChange}/>
-      <input type="submit" value="Add"/>
+      <input type="text" name="playerName" placeholder="Player Name" onChange={this.handleChange} />
+      <input type="number" name="position" placeholder="position" onChange={this.handleChange} />
+      <input type="submit" value="Add" />
     </form>;
   }
 }

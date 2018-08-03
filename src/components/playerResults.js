@@ -10,22 +10,22 @@ class PlayerResults extends React.Component {
 
 
   showTable() {
-    console.log('showtable');
+    console.log('showtable', this.state);
 
-return this.props.players;
-    }
+    return this.props.players;
+  }
 
   render() {
     return (
-    <Reddit.Wrapper>
-      <div>
-      <ul>
-      <Reddit.Text>
-      {this.showTable()}
-      </Reddit.Text>
-      </ul>
-     </div>
-     </Reddit.Wrapper>
+      <Reddit.Wrapper>
+        <div>
+          <ul>
+            <Reddit.Text>
+              {this.showTable()}
+            </Reddit.Text>
+          </ul>
+        </div>
+      </Reddit.Wrapper>
     );
   }
 }
