@@ -1,4 +1,5 @@
 import React from 'react';
+import Style from '../components/styledReddit.js'
 
 class PlayerItem extends React.Component {
   constructor(props) {
@@ -7,20 +8,28 @@ class PlayerItem extends React.Component {
       player: {},
     };
 
+    this.deletePlayer = this.deletePlayer.bind(this);
   }
-
-  //   handleRemove(e) {
-  //     this.props.remove(this.props.player.id);
-  //   }
-
-  render() {
+ 
+      deletePlayer(e) {
+        console.log('this state?', this.props.id);
+        e.preventDefault();
+        this.props.deletePlayer(this.props.id);
+      }
   
+  render() {
+    
     console.log('#2 render the player item', this.props.player);
-
-    return <li className="player">
-      <h3>Player: {this.props.player.playerName} Position:{this.props.player.position} </h3>
-      {/* <h4>{this.props.player}</h4> */}
-    </li>;
+    
+    return (
+    <Style.Title>
+      <li className="player">
+      <Style.Text><h3>Player: {this.props.player.playerName}</h3> 
+        <h4>Position:{this.props.player.position} </h4> </Style.Text>
+    <Style.Button onClick={this.deletePlayer}>x</Style.Button>
+    </li>
+    </Style.Title>
+    )
   }
 }
 
