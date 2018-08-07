@@ -24,13 +24,18 @@ class PlayersApp extends React.Component {
     this.state.players.push(player);
     this.setState({ players: [...this.state.players] });
     console.log('#1 added player:', this.state.players);
-  }
+
+    let storageToSet = JSON.stringify(this.state.players)
+    localStorage.setItem('note', storageToSet)  }
+
   deletePlayer(id) {
     const deletedPlayer = this.state.players.find(player => {
       return player.id = id; });
     const playerIndex = this.state.players.indexOf(deletedPlayer);
     this.state.players.splice(playerIndex, 1);
     this.setState({ players: [...this.state.players] });
+    let storageToSet = JSON.stringify(this.state.players)
+    localStorage.setItem('note', storageToSet)
   }
 
   render() {
