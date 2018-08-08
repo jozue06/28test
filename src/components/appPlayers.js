@@ -20,14 +20,6 @@ class PlayersApp extends React.Component {
 
   }
 
-  addPlayer(player) {
-    this.state.players.push(player);
-    this.setState({ players: [...this.state.players] });
-    console.log('#1 added player:', this.state.players);
-
-    let storageToSet = JSON.stringify(this.state.players)
-    localStorage.setItem('note', storageToSet)  }
-
     addPlayer = (player) => {
       let players = [...this.state.players]
       players.push(player);
